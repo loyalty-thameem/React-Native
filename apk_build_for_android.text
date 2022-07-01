@@ -1,0 +1,14 @@
+Release release build android:-
+ 
+      step1: remove index.js file in app/src/main/res/index.js
+      step2: cd android / gradlew clean ==> for clean build
+      step3: cd android gradlew assembleRelease ==> for release build
+      step4: npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+      step5: npx react-native run-android --variant=release
+
+I got issues... 
+after the solved the issue,
+    step1:cd android / gradlew clean ==> for clean build
+    step2: npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+    step3: npx react-native run-android
+     step4: npx react-native run-android --variant=release
